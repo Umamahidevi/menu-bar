@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FreshCart</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 60px;
+    color: green;
+    display: flex;
+    align-items: center;
+    animation: slideDown 1s ease;
+}
+
+header h2 {
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+header h2:hover {
+    color: darkgreen;
+    cursor: pointer;
+}
+
+input[type="search"] {
+    border-radius: 5px;
+    width: 500px;
+    margin-left: 100px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+input[type="search"]:hover {
+    box-shadow: 0px 0px 10px lightgreen;
+}
+
+header i {
+    transition: 0.3s;
+}
+
+header i:hover {
+    color: darkgreen;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* ---------------- NAVIGATION ---------------- */
+nav {
+    background-color: aliceblue;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 1.5s ease;
+}
+
+section {
+    background-color: green;
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+section:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul a {
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+ul a:hover {
+    color: green;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    background-color: rgb(243, 94, 156);
+    width: 100%;
+    height: 400px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.hero input[type="button"],
+.hero h1,
+.hero p {
+    animation: slideLeft 1.5s ease;
+}
+
+.hero input[type="button"] {
+    transition: 0.3s;
+}
+
+.hero input[type="button"]:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 15px yellow;
+}
+
+.hero img {
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    animation: zoomIn 2s ease;
+}
+
+/* ---------------- FEATURED IMAGES ---------------- */
+.featured {
+    padding: 20px 50px;
+}
+
+.featured img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    transition: 0.3s;
+    animation: popUp 1s ease;
+}
+
+.featured img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    filter: brightness(110%);
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes slideDown {
+    from { transform: translateY(-60px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-80px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popUp {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2><i class="fa-solid fa-cart-shopping"></i> FreshCart</h2>
+
+    <input type="search" placeholder="Search for products">
+    <i class="fa-solid fa-magnifying-glass" style="padding-left:10px;"></i>
+
+    <input type="button" value="Location" style="margin-left:80px; width:100px;">
+    
+    <i class="fa-regular fa-heart" style="padding-left:150px;"></i>
+    <i class="fa-regular fa-user" style="padding-left:20px;"></i>
+    <i class="fa-regular fa-envelope" style="padding-left:20px;"></i>
+</header>
+
+<nav>
+    <section>
+        <i class="fa-solid fa-qrcode"></i>&nbsp; All Departments
+    </section>
+
+    <ul>
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>Shop</li></a>
+        <a href="#"><li>Store</li></a>
+        <a href="#"><li>Mega Menu</li></a>
+        <a href="#"><li>Pages</li></a>
+        <a href="#"><li>Account</li></a>
+        <a href="#"><li>Docs</li></a>
+    </ul>
+</nav>
+
+<div class="hero">
+    <input type="button" value="Opening Sale Discount 50%" 
+           style="margin-left:100px; background-color:yellow; width:200px;">
+
+    <h1 style="margin-left:100px;">SuperMarket Daily</h1>
+    <h1 style="margin-left:100px; margin-top:5px;">Fresh Grocery</h1>
+
+    <p style="margin-left:100px; margin-top:10px;">
+        Introduced a new model for online grocery shopping <br>
+        and convenient home delivery
+    </p>
+
+    <input type="button" value="Shop Now →" 
+           style="height:30px; width:100px; background-color:black; color:white; margin-left:100px; margin-top:10px;">
+
+    <!-- CHANGE IMAGE PATH -->
+    <img src="discount.jpg" width="450" height="320" style="object-fit:cover;">
+</div>
+
+<h2 style="margin-left:150px;">Featured Categories</h2>
+
+<div class="featured">
+    <img src="bread.jpeg" alt="Bread" >
+    <img src="lays.jpeg" alt="Chips">
+    <img src="biscuit.jpeg" alt="Biscuit">
+    <img src="maggi.jpeg" alt="Maggi">
+    <img src="tetley.jpeg" alt="Tea">
+</div>
+
+</body>
+</html>
